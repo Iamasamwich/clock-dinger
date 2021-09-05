@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-const Clock = () => {
+const Clock = ({dinger}) => {
 
   const [hours, setHours] = useState(null);
   const [mins, setMins] = useState(null);
@@ -21,6 +21,17 @@ const Clock = () => {
     
     return () => clearTimeout(clock);
   }, []);
+
+  useEffect(() => {
+    if (dinger === 'noDing') {
+      return;
+    } else {
+      const ding = new Audio('./sounds/bell.mp3');
+      if ((Number(mins) % Number(dinger) === 0) && (Number(secs) === 0)) {
+        ding.play();
+      };
+    };
+  }, [mins, secs, dinger])
 
   const twoDigits = (num) => {
     return num < 10 ? '0' + num : '' + num;

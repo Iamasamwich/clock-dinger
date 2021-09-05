@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 
+const root = document.querySelector('#root');
 
-if (typeof document.fullscreenElement !== undefined) {
-  document.querySelector('#root').requestFullscreen();
-};
+if (!document.fullscreenElement) {
+  root.requestFullscreen().catch(err => {
+  });
+} else {
+  document.exitFullscreen();
+}
 
-ReactDOM.render(<App 
-  onClick={() => {console.log('clicked')}}
-/>, document.querySelector('#root'));
+ReactDOM.render(<App />, document.querySelector('#root'));

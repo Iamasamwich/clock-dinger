@@ -28,3 +28,54 @@ h1 {
   margin: 0;
   font-size: 120px;
 }
+
+.menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 0;
+  right: 0;
+  font-size: 35px;
+}
+
+.burger {
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.menuList {
+  margin-right: 10px;
+  text-align: right;
+}
+
+.menuHead {
+  cursor: default;
+  font-size: 20px;
+}
+
+.menuItem:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menuItem.selected:hover {
+  font-weight: normal;
+}
+
+.menuItem {
+  opacity: 0.5;
+}
+
+.selected {
+  opacity: 1;
+}
