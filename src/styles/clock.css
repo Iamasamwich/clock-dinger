@@ -36,6 +36,8 @@ h1 {
   top: 0;
   right: 0;
   font-size: 35px;
+  background-color: cadetblue;
+  z-index: 5;
 }
 
 .burger {
@@ -93,5 +95,8 @@ h1 {
 
   h1 {
     font-size: 4em;
+  }
+  .menuItem {
+    font-size: 25px;
   }
 }
