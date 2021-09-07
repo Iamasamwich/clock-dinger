@@ -8,13 +8,13 @@ const Clock = ({dinger}) => {
 
   useEffect(() => {
     const time = new Date();
-    setHours(twoDigits(time.getHours(), 'hrs'));
+    setHours(twoDigits(time.getHours()));
     setMins(twoDigits(time.getMinutes()));
     setSecs(twoDigits(time.getSeconds()));
 
     const clock = (setInterval(() => {
       const time = new Date();
-      setHours(twoDigits(time.getHours(), 'hrs'));
+      setHours(twoDigits(time.getHours()));
       setMins(twoDigits(time.getMinutes()));
       setSecs(twoDigits(time.getSeconds()));
     }, 1000));

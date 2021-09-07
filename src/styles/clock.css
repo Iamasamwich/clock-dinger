@@ -8,16 +8,15 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #clock {
-  position: absolute;
-  left: 50%;
-  top: 50%;
   width: 600px;
   height: 300px;
-  margin-left: -300px;
-  margin-top: -150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +25,7 @@ body {
 h1 {
   font-family: 'Roberto Mono', monospace;
   margin: 0;
-  font-size: 120px;
+  font-size: 124px;
 }
 
 .menu {
@@ -78,4 +77,21 @@ h1 {
 
 .selected {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #clock {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 5em;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+
+  h1 {
+    font-size: 4em;
+  }
 }
