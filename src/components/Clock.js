@@ -26,8 +26,8 @@ const Clock = ({dinger}) => {
     if (dinger === 'noDing') {
       return;
     } else {
-      const ding = new Audio('./sounds/bell.mp3');
       if ((Number(mins) % Number(dinger) === 0) && (Number(secs) === 0)) {
+        const ding = new Audio('./sounds/bell.mp3');
         ding.play();
       };
     };
